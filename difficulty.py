@@ -7,16 +7,18 @@ class Difficulty:
 
     def __init__(self):
         super().__init__()
-        self.snake_speed = self.set_difficulty()
+        self.snake_speed = 0
+        self.difficulty = 'easy'
+        self.set_difficulty()
         # self.set_difficulty()
 
     def set_difficulty(self, additional_msg="Choose a difficulty (easy, medium, hard): "):
         """sets the game difficulty based on the user input."""
-        difficulty = turtle.textinput("Difficulty",
-                                      f"{additional_msg}").lower()
-        return self.snake_speed(difficulty=difficulty)
+        self.difficulty = turtle.textinput("Difficulty",
+                                           f"{additional_msg}").lower()
+        self.set_speed(difficulty=self.difficulty)
 
-    def snake_speed(self, difficulty):
+    def set_speed(self, difficulty):
         """based on the chosen difficulty the snake speed will be set"""
         if difficulty == "easy":
             return 0

@@ -1,10 +1,32 @@
-# todo : I want to make levels to choose from and they're based on the speed of the snake (easy,medium,hard)
-# todo : I will create and arena for the snake with walls, if the snake hit them it will die and end the game.
-# todo : I will create the snake from parts, it size will increase each time it eats a peace of food
-# todo : I will create peace of food that respawns randomly in the arena and it disappears everytime the snake
-#  eats it
-# todo : I want to create scoreboard to calculate the score
-from difficulty import Difficulty
+import time
+import turtle
 
-difficulty = Difficulty()
-print(difficulty.snake_speed)
+from difficulty import Difficulty
+from snake import Snake
+
+SLEEP_SEC = 0.20
+SCREEN_WIDTH = 600
+SCREEN_HEIGHT = 600
+BG_COLOR = "black"
+
+turtle.bgcolor(BG_COLOR)
+turtle.setup(width=SCREEN_WIDTH,
+             height=SCREEN_HEIGHT)
+turtle.tracer(n=0)
+turtle.listen()
+
+# difficulty = Difficulty()
+snake = Snake()
+turtle.onkey(fun=snake.go_east, key='Right')
+turtle.onkey(fun=snake.go_north, key='Up')
+turtle.onkey(fun=snake.go_west, key='Left')
+turtle.onkey(fun=snake.go_south, key='Down')
+
+end_game = False
+while not end_game:
+    if not snake.move():
+        end_game = True
+    time.sleep(SLEEP_SEC)
+    turtle.update()
+
+turtle.mainloop()
