@@ -1,6 +1,6 @@
 from turtle import Turtle
 
-from global_contants import SECTION_SHAPE, COLOR, STRETCH, HIT_LIMIT
+from global_contants import SECTION_SHAPE, COLOR, STRETCH, HIT_LIMIT, STEPS
 
 
 class Section(Turtle):
@@ -26,17 +26,13 @@ class Section(Turtle):
                 self.xcor() >= HIT_LIMIT or
                 self.xcor() <= -HIT_LIMIT or
                 self.ycor() >= HIT_LIMIT or
-                self.ycor() <= -HIT_LIMIT):
+                self.ycor() <= -HIT_LIMIT
+        ):
             # here it will returns true if the sections hits the wall from the east or the north or the north
             # or the south
             return True
 
-    def eat(self, food_peace):
-        """detect if the snake head eats the food"""
-        if self.distance(food_peace) < 15:
-            food_peace.reposition()
-
     def move(self):
         """move the snake sections"""
         self.setheading(self.next_heading)
-        self.forward(20)
+        self.forward(STEPS)

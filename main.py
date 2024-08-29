@@ -6,27 +6,33 @@ from snake import Snake
 from food import Food
 from global_contants import SCREEN_WIDTH, SCREEN_HEIGHT, BG_COLOR, KEYS, TRACER_VALUE
 
-end_game = False
-difficulty = Difficulty()
-snake = Snake()
-food = Food()
-sleep_sec = difficulty.game_speed
 
-turtle.bgcolor(BG_COLOR)
-turtle.setup(width=SCREEN_WIDTH,
-             height=SCREEN_HEIGHT)
-turtle.tracer(TRACER_VALUE)
-turtle.listen()
+def play_game():
+    """deals with the whole game logic"""
+    difficulty = Difficulty()
+    snake = Snake()
+    food = Food()
+    sleep_sec = difficulty.game_speed
+    end_game = False
 
-turtle.onkeypress(fun=snake.go_east, key=KEYS[0])
-turtle.onkeypress(fun=snake.go_north, key=KEYS[1])
-turtle.onkeypress(fun=snake.go_west, key=KEYS[2])
-turtle.onkeypress(fun=snake.go_south, key=KEYS[3])
+    turtle.bgcolor(BG_COLOR)
+    turtle.setup(width=SCREEN_WIDTH,
+                 height=SCREEN_HEIGHT)
+    turtle.tracer(TRACER_VALUE)
+    turtle.listen()
 
-while not end_game:
-    if not snake.move(food):
-        end_game = True
-    time.sleep(sleep_sec)
-    turtle.update()
+    turtle.onkeypress(fun=snake.go_east, key=KEYS[0])
+    turtle.onkeypress(fun=snake.go_north, key=KEYS[1])
+    turtle.onkeypress(fun=snake.go_west, key=KEYS[2])
+    turtle.onkeypress(fun=snake.go_south, key=KEYS[3])
 
-turtle.mainloop()
+    while not end_game:
+        if not snake.move(food):
+            end_game = True
+        time.sleep(sleep_sec)
+        turtle.update()
+
+
+while True:
+    play_game()
+    turtle.clearscreen()

@@ -1,5 +1,5 @@
 import turtle
-from global_contants import GAME_SPEED
+from global_contants import GAME_SPEED, PROMPT_MSG, PROMPT_TITLE, PROMPT_MSG_ERROR
 
 
 class Difficulty:
@@ -12,11 +12,11 @@ class Difficulty:
 
     def set_difficulty(
             self,
-            additional_msg="Choose a difficulty (easy: 1, medium: 2 hard: 3): "):
+            prompt_msg=PROMPT_MSG):
         """sets the game difficulty based on the user input."""
         difficulty = int((
             turtle.
-            textinput("Difficulty", f"{additional_msg}").lower()))
+            textinput(PROMPT_TITLE, f"{prompt_msg}").lower()))
         self.set_speed(difficulty_par=difficulty)
 
     def set_speed(self, difficulty_par):
@@ -29,4 +29,4 @@ class Difficulty:
         elif difficulty_par == 3:
             self.game_speed = GAME_SPEED[2]
         else:
-            self.set_difficulty(additional_msg="Please choose a proper difficulty (easy, medium, hard): ")
+            self.set_difficulty(prompt_msg=PROMPT_MSG_ERROR)
