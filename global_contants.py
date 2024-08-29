@@ -3,6 +3,7 @@
 SCREEN_WIDTH = 600
 SCREEN_HEIGHT = 600
 BG_COLOR = "white"
+KEYS = ('Right', 'Up', 'Left', 'Down')
 
 # snake class
 HEADINGS = (0, 90, 180, 270)
