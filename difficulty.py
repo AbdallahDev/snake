@@ -29,6 +29,7 @@ class Difficulty:
         snake speed will be set"""
         if difficulty_par == 1:
             self.snake_speed = 0.06
+            self.snake_speed = 0.1
         elif difficulty_par == 2:
             self.snake_speed = 0.04
         elif difficulty_par == 3:
