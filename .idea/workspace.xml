@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d30e7a30-2621-4973-906a-9caf60adcc90" name="Changes" comment="made the snake class and its related ones">
-      <change afterPath="$PROJECT_DIR$/global_variables.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+    <list default="true" id="d30e7a30-2621-4973-906a-9caf60adcc90" name="Changes" comment="based on the chosen difficulty the speed of the snake decided.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/difficulty.py" beforeDir="false" afterPath="$PROJECT_DIR$/difficulty.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/section.py" beforeDir="false" afterPath="$PROJECT_DIR$/section.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/snake.py" afterDir="false" />
@@ -174,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724706211180</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="based on the chosen difficulty the speed of the snake decided.">
+      <option name="closed" value="true" />
+      <created>1724913873040</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1724913873040</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -182,6 +187,7 @@
     <MESSAGE value="start" />
     <MESSAGE value="made the difficulty class" />
     <MESSAGE value="made the snake class and its related ones" />
-    <option name="LAST_COMMIT_MESSAGE" value="made the snake class and its related ones" />
+    <MESSAGE value="based on the chosen difficulty the speed of the snake decided." />
+    <option name="LAST_COMMIT_MESSAGE" value="based on the chosen difficulty the speed of the snake decided." />
   </component>
 </project>
