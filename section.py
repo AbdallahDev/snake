@@ -1,6 +1,6 @@
 from turtle import Turtle
 
-from global_contants import SHAPE, COLOR, STRETCH, HIT_LIMIT
+from global_contants import SECTION_SHAPE, COLOR, STRETCH, HIT_LIMIT
 
 
 class Section(Turtle):
@@ -8,7 +8,7 @@ class Section(Turtle):
 
     def __init__(
             self, position,
-            color=COLOR, shape=SHAPE, ):
+            color=COLOR, shape=SECTION_SHAPE, ):
         super().__init__()
         self.penup()
         self.color(color)
@@ -31,6 +31,12 @@ class Section(Turtle):
             # or the south
             return True
 
+    def eat(self, food_peace):
+        """detect if the snake head eats the food"""
+        if self.distance(food_peace) < 15:
+            food_peace.reposition()
+
     def move(self):
+        """move the snake sections"""
         self.setheading(self.next_heading)
         self.forward(20)

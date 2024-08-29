@@ -3,9 +3,9 @@
 import turtle
 
 from section import Section
-from global_contants import HEADINGS, STEPS, INITIAL_COORDINATES
+from global_contants import HEADINGS, STEPS, INITIAL_COORDINATES, SNAKE_SHAPE
 
-turtle.register_shape('face1.gif')
+turtle.register_shape(SNAKE_SHAPE)
 
 
 class Snake:
@@ -15,9 +15,9 @@ class Snake:
         self.next_heading = HEADINGS[0]
         self.steps = STEPS
         self.sections = []
-        self.initialize()
+        self.make_snake()
 
-    def initialize(self):
+    def make_snake(self):
         """creates the initial sections of the snake"""
         initial_coordinates = INITIAL_COORDINATES
 
@@ -25,8 +25,7 @@ class Snake:
             if initial_coordinates.index(coord) == 0:
                 sec = Section(
                     position=coord,
-                    color='red',
-                    shape='face1.gif',
+                    shape=SNAKE_SHAPE,
                 )
             else:
                 sec = Section(
@@ -51,13 +50,15 @@ class Snake:
         """turns the snake to the south"""
         self.next_heading = HEADINGS[3]
 
-    def move(self):
+    def move(self, food_peace):
         """moves the snake"""
         for indx in range(len(self.sections)):
             current_sec = self.sections[indx]
 
             if indx == 0:
+                # current_sec here represents the snake head
                 current_sec.next_heading = self.next_heading
+                current_sec.eat(food_peace)
 
             try:
                 next_sec = self.sections[indx + 1]
