@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d30e7a30-2621-4973-906a-9caf60adcc90" name="Changes" comment="make the snake grows when it eats food">
+    <list default="true" id="d30e7a30-2621-4973-906a-9caf60adcc90" name="Changes" comment="fix some issues regard eating the food">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/food.py" beforeDir="false" afterPath="$PROJECT_DIR$/food.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/global_contants.py" beforeDir="false" afterPath="$PROJECT_DIR$/global_contants.py" afterDir="false" />
@@ -243,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724943512921</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fix some issues regard eating the food">
+      <option name="closed" value="true" />
+      <created>1724945561694</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1724945561694</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -258,6 +266,7 @@
     <MESSAGE value="created the food then detects if the snake eats it" />
     <MESSAGE value="ban the food from respawning at the snake parts locations and its last location" />
     <MESSAGE value="make the snake grows when it eats food" />
-    <option name="LAST_COMMIT_MESSAGE" value="make the snake grows when it eats food" />
+    <MESSAGE value="fix some issues regard eating the food" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix some issues regard eating the food" />
   </component>
 </project>

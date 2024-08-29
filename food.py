@@ -18,18 +18,20 @@ class Food(Turtle):
 
     def random_coordinate(self):
         """generate random location for the food"""
-        # FOOD_LIMIT = 50
+        FOOD_LIMIT = 50
         x = randint(-FOOD_LIMIT, FOOD_LIMIT)
         y = randint(-FOOD_LIMIT, FOOD_LIMIT)
         return x, y
 
+    def close_to_old_location(self, new_coord):
+        for coord in self.prohibited_coordinates:
+            if new_coord.distance(coord):
+                return True
+
     def reposition(self):
         """reposition the food peace randomly"""
-        self.prohibited_coordinates.append(self.pos())
         coordinate = self.random_coordinate()
-        # while coordinate in self.prohibited_coordinates:
-        #     coordinate = self.random_coordinate()
-
-        # print(self.prohibited_coordinates)
+        while self.distance(coordinate) <= 30:
+            coordinate = self.random_coordinate()
 
         self.goto(coordinate)

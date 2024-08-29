@@ -1,4 +1,5 @@
-# todo: ends the game when the snake hits itself
+# todo: ends the game when the snake hits itself, i'll do that by looping over the snake parts and find if there anyone
+#  of them has a distance less than 40 with the head
 import turtle
 
 from section import Section
@@ -54,11 +55,11 @@ class Snake:
         if self.head.heading() != HEADINGS[1]:
             self.next_heading = HEADINGS[3]
 
-    def snake_parts_locations(self, food):
+    def close_to_snake_part(self, obj, prohibited_distance):
         """gets the snake parts locations to ban the food from respawning in it"""
-        food.prohibited_coordinates = []
         for part in self.sections:
-            food.prohibited_coordinates.append(part.pos())
+            if obj.distance(part) <= prohibited_distance:
+                return True
 
     def grow(self):
         """increase the snake size everytime it eats food, it does that by adding a new part to it"""
@@ -69,9 +70,11 @@ class Snake:
     def eat(self, head, food):
         """detect if the snake eats the food"""
         if head.distance(food) <= EATING_DISTANCE:
-            print(head.distance(food))
-            self.snake_parts_locations(food)
             food.reposition()
+            while self.close_to_snake_part(food, 27):
+                print(self.close_to_snake_part(food, 27))
+                food.reposition()
+
             self.grow()
 
     def move(self, food):
