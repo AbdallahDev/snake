@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d30e7a30-2621-4973-906a-9caf60adcc90" name="Changes" comment="ban the food from respawning at the snake parts locations and its last location">
+    <list default="true" id="d30e7a30-2621-4973-906a-9caf60adcc90" name="Changes" comment="make the snake grows when it eats food">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/food.py" beforeDir="false" afterPath="$PROJECT_DIR$/food.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/global_contants.py" beforeDir="false" afterPath="$PROJECT_DIR$/global_contants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rat.gif" beforeDir="false" afterPath="$PROJECT_DIR$/rat.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/rat_20px.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resources/rat_20px.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/section.py" beforeDir="false" afterPath="$PROJECT_DIR$/section.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/snake.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snake_head.gif" beforeDir="false" afterPath="$PROJECT_DIR$/snake_head.gif" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724935994166</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="make the snake grows when it eats food">
+      <option name="closed" value="true" />
+      <created>1724943512921</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1724943512921</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -254,6 +257,7 @@
     <MESSAGE value="Variables are collected into one file." />
     <MESSAGE value="created the food then detects if the snake eats it" />
     <MESSAGE value="ban the food from respawning at the snake parts locations and its last location" />
-    <option name="LAST_COMMIT_MESSAGE" value="ban the food from respawning at the snake parts locations and its last location" />
+    <MESSAGE value="make the snake grows when it eats food" />
+    <option name="LAST_COMMIT_MESSAGE" value="make the snake grows when it eats food" />
   </component>
 </project>

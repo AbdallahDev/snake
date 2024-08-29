@@ -69,6 +69,7 @@ class Snake:
     def eat(self, head, food):
         """detect if the snake eats the food"""
         if head.distance(food) <= EATING_DISTANCE:
+            print(head.distance(food))
             self.snake_parts_locations(food)
             food.reposition()
             self.grow()
