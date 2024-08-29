@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d30e7a30-2621-4973-906a-9caf60adcc90" name="Changes" comment="stops the snake movement when the snake hits the wall">
+    <list default="true" id="d30e7a30-2621-4973-906a-9caf60adcc90" name="Changes" comment="changed the snake face">
+      <change afterPath="$PROJECT_DIR$/face1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/global_contants.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/face2.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/difficulty.py" beforeDir="false" afterPath="$PROJECT_DIR$/difficulty.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/snake.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724915413188</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="changed the snake face">
+      <option name="closed" value="true" />
+      <created>1724923969070</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1724923969070</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -195,6 +208,7 @@
     <MESSAGE value="made the snake class and its related ones" />
     <MESSAGE value="based on the chosen difficulty the speed of the snake decided." />
     <MESSAGE value="stops the snake movement when the snake hits the wall" />
-    <option name="LAST_COMMIT_MESSAGE" value="stops the snake movement when the snake hits the wall" />
+    <MESSAGE value="changed the snake face" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed the snake face" />
   </component>
 </project>

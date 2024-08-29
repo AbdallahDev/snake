@@ -3,14 +3,7 @@
 import turtle
 
 from section import Section
-
-HEADINGS = (0, 90, 180, 270)
-STEPS = 20
-INITIAL_COORDINATES = [
-    (40, 0),
-    (20, 0),
-    (0, 0),
-]
+from global_contants import HEADINGS, STEPS, INITIAL_COORDINATES
 
 turtle.register_shape('face1.gif')
 

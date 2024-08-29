@@ -3,15 +3,12 @@ import turtle
 
 from difficulty import Difficulty
 from snake import Snake
-
-SCREEN_WIDTH = 600
-SCREEN_HEIGHT = 600
-BG_COLOR = "white"
+from global_contants import SCREEN_WIDTH, SCREEN_HEIGHT, BG_COLOR
 
 end_game = False
 difficulty = Difficulty()
 snake = Snake()
-sleep_sec = difficulty.snake_speed
+sleep_sec = difficulty.game_speed
 
 turtle.bgcolor(BG_COLOR)
 turtle.setup(width=SCREEN_WIDTH,

@@ -1,10 +1,6 @@
-import turtle
 from turtle import Turtle
 
-SHAPE = 'square'
-COLOR = 'grey'
-HIT_LIMIT = 300
-STRETCH = 1
+from global_contants import SHAPE, COLOR, STRETCH, HIT_LIMIT
 
 
 class Section(Turtle):
