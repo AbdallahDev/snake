@@ -1,21 +1,32 @@
+import turtle
 from turtle import Turtle
 
-SHAPE = 'circle'
+SHAPE = 'square'
 COLOR = 'grey'
 HIT_LIMIT = 290
+
+STRETCH = 1
 
 
 class Section(Turtle):
     """Represents the snake section"""
 
     def __init__(
-            self, xcor, ycor,
-            color=COLOR, shape=SHAPE):
+            self, position,
+            steps,
+            color=COLOR, shape=SHAPE, ):
         super().__init__()
         self.penup()
         self.color(color)
         self.shape(shape)
-        self.goto(x=xcor, y=ycor)
+        # self.speed(SPEED1)
+        self.shapesize(
+            stretch_wid=STRETCH,
+            stretch_len=STRETCH,
+        )
+        self.goto(position)
+        self.steps = steps
+        self.next_heading = 0
 
     def hit_wall(self):
         """check for the wall borders
@@ -33,3 +44,7 @@ class Section(Turtle):
             # or the north
             # or the south
             return True
+
+    def move(self):
+        self.setheading(self.next_heading)
+        self.forward(self.steps)
