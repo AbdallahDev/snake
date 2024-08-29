@@ -11,12 +11,22 @@ class Food(Turtle):
 
     def __init__(self):
         super().__init__()
+        self.prohibited_coordinates = [(0, 0)]
         self.penup()
         self.shape(FOOD_SHAPE)
         self.reposition()
 
-    def reposition(self):
-        """reposition the food peace randomly"""
+    def random_coordinate(self):
+        """generate random location for the food"""
         x = randint(-FOOD_LIMIT, FOOD_LIMIT)
         y = randint(-FOOD_LIMIT, FOOD_LIMIT)
-        self.goto(x=x, y=y)
+        return x, y
+
+    def reposition(self):
+        """reposition the food peace randomly"""
+        self.prohibited_coordinates.append(self.pos())
+        coordinate = self.random_coordinate()
+        while coordinate in self.prohibited_coordinates:
+            coordinate = self.random_coordinate()
+
+        self.goto(coordinate)

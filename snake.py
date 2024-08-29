@@ -3,9 +3,9 @@
 import turtle
 
 from section import Section
-from global_contants import HEADINGS, STEPS, INITIAL_COORDINATES, SNAKE_SHAPE
+from global_contants import HEADINGS, STEPS, INITIAL_COORDINATES, HEAD_SHAPE
 
-turtle.register_shape(SNAKE_SHAPE)
+turtle.register_shape(HEAD_SHAPE)
 
 
 class Snake:
@@ -25,7 +25,7 @@ class Snake:
             if initial_coordinates.index(coord) == 0:
                 sec = Section(
                     position=coord,
-                    shape=SNAKE_SHAPE,
+                    shape=HEAD_SHAPE,
                 )
             else:
                 sec = Section(
@@ -50,6 +50,12 @@ class Snake:
         """turns the snake to the south"""
         self.next_heading = HEADINGS[3]
 
+    def snake_parts_locations(self, food_peace):
+        """gets the snake parts locations to ban the food from respawning in it"""
+        food_peace.prohibited_coordinates = []
+        for part in self.sections:
+            food_peace.prohibited_coordinates.append(part.pos())
+
     def move(self, food_peace):
         """moves the snake"""
         for indx in range(len(self.sections)):
@@ -58,6 +64,7 @@ class Snake:
             if indx == 0:
                 # current_sec here represents the snake head
                 current_sec.next_heading = self.next_heading
+                self.snake_parts_locations(food_peace)
                 current_sec.eat(food_peace)
 
             try:
@@ -70,5 +77,7 @@ class Snake:
                 return False
 
             current_sec.move()
+            # food_peace.prohibited_coordinates.append(current_sec.pos())
+            # print(len(food_peace.prohibited_coordinates))
 
         return True

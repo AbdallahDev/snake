@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d30e7a30-2621-4973-906a-9caf60adcc90" name="Changes" comment="Variables are collected into one file.">
+    <list default="true" id="d30e7a30-2621-4973-906a-9caf60adcc90" name="Changes" comment="created the food then detects if the snake eats it">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/face1.gif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/food.py" beforeDir="false" afterPath="$PROJECT_DIR$/food.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/global_contants.py" beforeDir="false" afterPath="$PROJECT_DIR$/global_contants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/section.py" beforeDir="false" afterPath="$PROJECT_DIR$/section.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/snake.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snake_face.gif" beforeDir="false" afterPath="$PROJECT_DIR$/snake_head.gif" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +212,23 @@
       <option name="project" value="LOCAL" />
       <updated>1724925089741</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="created the food then detects if the snake eats it">
+      <option name="closed" value="true" />
+      <created>1724928687346</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1724928687346</updated>
+    </task>
+    <task id="LOCAL-00010" summary="created the food then detects if the snake eats it">
+      <option name="closed" value="true" />
+      <created>1724928711338</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1724928711338</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -226,6 +240,7 @@
     <MESSAGE value="stops the snake movement when the snake hits the wall" />
     <MESSAGE value="changed the snake face" />
     <MESSAGE value="Variables are collected into one file." />
-    <option name="LAST_COMMIT_MESSAGE" value="Variables are collected into one file." />
+    <MESSAGE value="created the food then detects if the snake eats it" />
+    <option name="LAST_COMMIT_MESSAGE" value="created the food then detects if the snake eats it" />
   </component>
 </project>

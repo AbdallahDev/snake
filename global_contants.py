@@ -1,7 +1,7 @@
 # contains the global constants
 # main file
-SCREEN_WIDTH = 600
-SCREEN_HEIGHT = 600
+SCREEN_WIDTH = 500
+SCREEN_HEIGHT = 500
 BG_COLOR = "white"
 KEYS = ('Right', 'Up', 'Left', 'Down')
 TRACER_VALUE = 0
@@ -15,16 +15,16 @@ INITIAL_COORDINATES = [
     (0, 0),
 ]
 #  snake head
-SNAKE_SHAPE = 'snake_face.gif'
+HEAD_SHAPE = 'snake_head.gif'
 
 # section class
 SECTION_SHAPE = 'circle'
 COLOR = 'grey'
 STRETCH = 1
-HIT_LIMIT = 300
+HIT_LIMIT = SCREEN_WIDTH / 2
 
 # food class
-FOOD_LIMIT = 260
+FOOD_LIMIT = SCREEN_WIDTH / 2 - 40
 FOOD_SHAPE = 'rat.gif'
 
 # difficulty class
