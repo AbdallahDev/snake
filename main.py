@@ -9,7 +9,7 @@ from global_contants import SCREEN_WIDTH, SCREEN_HEIGHT, BG_COLOR, KEYS, TRACER_
 
 
 def play_game():
-    """deals with the whole game logic"""
+    """deals with the whole game logic"""""
     difficulty = Difficulty()
     scoreboard = ScoreBoard()
     snake = Snake()

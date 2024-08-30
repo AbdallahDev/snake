@@ -7,7 +7,7 @@ turtle.register_shape(HEAD_SHAPE)
 
 
 class Snake:
-    """Represents the snake"""
+    """Represents the snake"""""
 
     def __init__(self):
         self.next_heading = HEADINGS[0]
@@ -17,7 +17,7 @@ class Snake:
         self.head = self.sections[0]
 
     def make_snake(self):
-        """creates the initial sections of the snake"""
+        """creates the initial sections of the snake"""""
         initial_coordinates = INITIAL_COORDINATES
 
         for coord in initial_coordinates:
@@ -34,27 +34,27 @@ class Snake:
             self.sections.append(sec)
 
     def go_east(self):
-        """turns the snake to the east"""
+        """turns the snake to the east"""""
         if self.head.heading() != HEADINGS[2]:
             self.next_heading = HEADINGS[0]
 
     def go_north(self):
-        """turns the snake to the north"""
+        """turns the snake to the north"""""
         if self.head.heading() != HEADINGS[3]:
             self.next_heading = HEADINGS[1]
 
     def go_west(self):
-        """turns the snake to the west"""
+        """turns the snake to the west"""""
         if self.head.heading() != HEADINGS[0]:
             self.next_heading = HEADINGS[2]
 
     def go_south(self):
-        """turns the snake to the south"""
+        """turns the snake to the south"""""
         if self.head.heading() != HEADINGS[1]:
             self.next_heading = HEADINGS[3]
 
     def close_to_snake_part(self, obj, prohibited_distance):
-        """gets the snake parts locations to ban the food from respawning in it"""
+        """gets the snake parts locations to ban the food from respawning in it"""""
         for part in self.sections:
             if obj.distance(part) <= prohibited_distance:
                 return True
@@ -62,20 +62,20 @@ class Snake:
         return False
 
     def snake_eats_itself(self):
-        # check if the head hits any part in the snake, then return False to end the game
+        """check if the head hits any part in the snake, then return False to end the game"""""
         for part in self.sections[1:]:
             if self.head.distance(part) <= 35:
                 return True
         return False
 
     def grow(self):
-        """increase the snake size everytime it eats food, it does that by adding a new part to it"""
+        """""increase the snake size everytime it eats food, it does that by adding a new part to it"""""
         # the new part will take the tail position
         tail_position = self.sections[-1].pos()
         self.sections.append(Section(position=tail_position))
 
     def eat(self, head, food, scoreboard):
-        """detect if the snake eats the food"""
+        """"detect if the snake eats the food"""""
         if head.distance(food) <= EATING_DISTANCE:
             scoreboard.update_score()
             food.reposition()
@@ -85,7 +85,7 @@ class Snake:
             self.grow()
 
     def move(self, food, scoreboard):
-        """moves the snake"""
+        """"moves the snake"""""
         keep_moving = True
         for indx in range(len(self.sections)):
             current_sec = self.sections[indx]

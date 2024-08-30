@@ -4,7 +4,7 @@ from global_contants import SECTION_SHAPE, COLOR, STRETCH, HIT_LIMIT, STEPS
 
 
 class Section(Turtle):
-    """Represents the snake section"""
+    """Represents the snake section"""""
 
     def __init__(
             self, position,
@@ -21,7 +21,7 @@ class Section(Turtle):
         self.next_heading = 0
 
     def hit_wall(self):
-        """check for the wall borders and returns true if the sections hits it"""
+        """check for the wall borders and returns true if the sections hits it"""""
         if (
                 self.xcor() >= HIT_LIMIT or
                 self.xcor() <= -HIT_LIMIT or
@@ -33,6 +33,6 @@ class Section(Turtle):
             return True
 
     def move(self):
-        """move the snake sections"""
+        """move the snake sections"""""
         self.setheading(self.next_heading)
         self.forward(STEPS)

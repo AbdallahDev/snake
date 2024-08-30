@@ -1,4 +1,5 @@
 # contains the global constants
+
 # main file
 SCREEN_WIDTH = 600
 SCREEN_HEIGHT = SCREEN_WIDTH

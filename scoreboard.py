@@ -5,6 +5,7 @@ from global_contants import SCORE_POSITION, SCORE_FONT, SCORE_ALIGNMENT, SCORE_A
 
 
 class ScoreBoard(Turtle):
+    """""Represents the scoreboard related things like the score and the game over."""""
     def __init__(self):
         super().__init__()
         self.penup()
@@ -14,11 +15,13 @@ class ScoreBoard(Turtle):
         self.update_score()
 
     def update_score(self):
+        """""updates the score on the screen"""""
         self.score += SCORE_INCREMENT_VALUE
         self.clear()
         self.write(arg=SCORE_ARGUMENT + str(self.score), align=SCORE_ALIGNMENT, font=SCORE_FONT)
 
     def game_over(self):
+        """""show the game over when the game ends"""""
         self.goto(GAME_OVER_POSITION)
         self.color(GAME_OVER_COLOR)
         self.write(arg=GAME_OVER_ARG, align=GAME_OVER_ALIGNMENT, font=GAME_OVER_FONT)

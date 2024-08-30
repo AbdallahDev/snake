@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d30e7a30-2621-4973-906a-9caf60adcc90" name="Changes" comment="I've detected when the snake hits itself or the wall">
+    <list default="true" id="d30e7a30-2621-4973-906a-9caf60adcc90" name="Changes" comment="did the scoreboard class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/global_contants.py" beforeDir="false" afterPath="$PROJECT_DIR$/global_contants.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scoreboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/scoreboard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/snake.py" afterDir="false" />
@@ -268,7 +267,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725004061543</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="did the scoreboard class">
+      <option name="closed" value="true" />
+      <created>1725007566891</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1725007566891</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -286,6 +293,7 @@
     <MESSAGE value="fix some issues regard eating the food" />
     <MESSAGE value="ban the food from respawning near the snake" />
     <MESSAGE value="I've detected when the snake hits itself or the wall" />
-    <option name="LAST_COMMIT_MESSAGE" value="I've detected when the snake hits itself or the wall" />
+    <MESSAGE value="did the scoreboard class" />
+    <option name="LAST_COMMIT_MESSAGE" value="did the scoreboard class" />
   </component>
 </project>

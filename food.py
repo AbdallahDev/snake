@@ -7,7 +7,7 @@ turtle.register_shape(FOOD_SHAPE)
 
 
 class Food(Turtle):
-    """Represents the snake food"""
+    """Represents the snake food"""""
 
     def __init__(self):
         super().__init__()
@@ -17,19 +17,20 @@ class Food(Turtle):
         self.reposition()
 
     def random_coordinate(self):
-        """generate random location for the food"""
+        """generate random location for the food"""""
         # FOOD_LIMIT = 50
         x = randint(-FOOD_LIMIT, FOOD_LIMIT)
         y = randint(-FOOD_LIMIT, FOOD_LIMIT)
         return x, y
 
     def close_to_old_location(self, new_coord):
+        """checks if the new food respawn located on the old one"""""
         for coord in self.prohibited_coordinates:
             if new_coord.distance(coord):
                 return True
 
     def reposition(self):
-        """reposition the food peace randomly"""
+        """reposition the food peace randomly"""""
         coordinate = self.random_coordinate()
         while self.distance(coordinate) <= 30:
             coordinate = self.random_coordinate()
