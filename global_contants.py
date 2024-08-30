@@ -14,7 +14,7 @@ INITIAL_COORDINATES = [
     (40, 0),
     (0, 0),
 ]
-EATING_DISTANCE = 28
+EATING_DISTANCE = 30
 #  snake head
 HEAD_SHAPE = 'snake_head.gif'
 

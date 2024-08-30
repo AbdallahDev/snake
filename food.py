@@ -18,7 +18,7 @@ class Food(Turtle):
 
     def random_coordinate(self):
         """generate random location for the food"""
-        FOOD_LIMIT = 50
+        # FOOD_LIMIT = 50
         x = randint(-FOOD_LIMIT, FOOD_LIMIT)
         y = randint(-FOOD_LIMIT, FOOD_LIMIT)
         return x, y

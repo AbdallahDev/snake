@@ -6,7 +6,7 @@ t = turtle.Turtle()
 
 def north():
     t.setheading(90)
-    print(t.heading())
+    # print(t.heading())
 
 
 # turtle.bgcolor(BG_COLOR)

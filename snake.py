@@ -61,6 +61,15 @@ class Snake:
             if obj.distance(part) <= prohibited_distance:
                 return True
 
+        return False
+
+    def snake_eats_itself(self):
+        # check if the head hits any part in the snake, then return False to end the game
+        for part in self.sections[1:]:
+            if self.head.distance(part) <= 35:
+                return True
+        return False
+
     def grow(self):
         """increase the snake size everytime it eats food, it does that by adding a new part to it"""
         # the new part will take the tail position
@@ -72,13 +81,13 @@ class Snake:
         if head.distance(food) <= EATING_DISTANCE:
             food.reposition()
             while self.close_to_snake_part(food, 27):
-                print(self.close_to_snake_part(food, 27))
                 food.reposition()
 
             self.grow()
 
     def move(self, food):
         """moves the snake"""
+        keep_moving = True
         for indx in range(len(self.sections)):
             current_sec = self.sections[indx]
 
@@ -86,6 +95,9 @@ class Snake:
                 # current_sec here represents the snake head
                 current_sec.next_heading = self.next_heading
                 self.eat(self.sections[0], food)
+                # I'll save False in keep_moving whe the head hits the wall or itself
+                if self.snake_eats_itself() or self.head.hit_wall():
+                    keep_moving = False
 
             try:
                 next_sec = self.sections[indx + 1]
@@ -93,9 +105,6 @@ class Snake:
             except:
                 pass
 
-            if current_sec.hit_wall():
-                return False
-
             current_sec.move()
 
-        return True
+        return keep_moving
