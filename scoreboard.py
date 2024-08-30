@@ -12,9 +12,9 @@ class ScoreBoard(Turtle):
         self.hideturtle()
         self.goto(SCORE_POSITION)
         self.score = SCORE_DEFAULT_VALUE
-        self.update_score()
+        self.update_scoreboard()
 
-    def update_score(self):
+    def update_scoreboard(self):
         """""updates the score on the screen"""""
         self.score += SCORE_INCREMENT_VALUE
         self.clear()

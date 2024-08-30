@@ -77,7 +77,7 @@ class Snake:
     def eat(self, head, food, scoreboard):
         """"detect if the snake eats the food"""""
         if head.distance(food) <= EATING_DISTANCE:
-            scoreboard.update_score()
+            scoreboard.update_scoreboard()
             food.reposition()
             while self.close_to_snake_part(food, 27):
                 food.reposition()

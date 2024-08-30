@@ -5,7 +5,7 @@ from difficulty import Difficulty
 from scoreboard import ScoreBoard
 from snake import Snake
 from food import Food
-from global_contants import SCREEN_WIDTH, SCREEN_HEIGHT, BG_COLOR, KEYS, TRACER_VALUE,TITLE
+from global_contants import SCREEN_WIDTH, SCREEN_HEIGHT, BG_COLOR, KEYS, TRACER_VALUE, TITLE
 
 
 def play_game():
