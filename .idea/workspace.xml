@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d30e7a30-2621-4973-906a-9caf60adcc90" name="Changes" comment="ban the food from respawning near the snake">
+    <list default="true" id="d30e7a30-2621-4973-906a-9caf60adcc90" name="Changes" comment="I've detected when the snake hits itself or the wall">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food.py" beforeDir="false" afterPath="$PROJECT_DIR$/food.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/global_contants.py" beforeDir="false" afterPath="$PROJECT_DIR$/global_contants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scoreboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/scoreboard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/snake.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724947670806</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="I've detected when the snake hits itself or the wall">
+      <option name="closed" value="true" />
+      <created>1725004061542</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1725004061543</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -277,6 +285,7 @@
     <MESSAGE value="make the snake grows when it eats food" />
     <MESSAGE value="fix some issues regard eating the food" />
     <MESSAGE value="ban the food from respawning near the snake" />
-    <option name="LAST_COMMIT_MESSAGE" value="ban the food from respawning near the snake" />
+    <MESSAGE value="I've detected when the snake hits itself or the wall" />
+    <option name="LAST_COMMIT_MESSAGE" value="I've detected when the snake hits itself or the wall" />
   </component>
 </project>

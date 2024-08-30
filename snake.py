@@ -1,5 +1,3 @@
-# todo: ends the game when the snake hits itself, i'll do that by looping over the snake parts and find if there anyone
-#  of them has a distance less than 40 with the head
 import turtle
 
 from section import Section
@@ -76,16 +74,17 @@ class Snake:
         tail_position = self.sections[-1].pos()
         self.sections.append(Section(position=tail_position))
 
-    def eat(self, head, food):
+    def eat(self, head, food, scoreboard):
         """detect if the snake eats the food"""
         if head.distance(food) <= EATING_DISTANCE:
+            scoreboard.update_score()
             food.reposition()
             while self.close_to_snake_part(food, 27):
                 food.reposition()
 
             self.grow()
 
-    def move(self, food):
+    def move(self, food, scoreboard):
         """moves the snake"""
         keep_moving = True
         for indx in range(len(self.sections)):
@@ -94,7 +93,7 @@ class Snake:
             if indx == 0:
                 # current_sec here represents the snake head
                 current_sec.next_heading = self.next_heading
-                self.eat(self.sections[0], food)
+                self.eat(self.sections[0], food, scoreboard)
                 # I'll save False in keep_moving whe the head hits the wall or itself
                 if self.snake_eats_itself() or self.head.hit_wall():
                     keep_moving = False

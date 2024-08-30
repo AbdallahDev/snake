@@ -2,6 +2,7 @@ import time
 import turtle
 
 from difficulty import Difficulty
+from scoreboard import ScoreBoard
 from snake import Snake
 from food import Food
 from global_contants import SCREEN_WIDTH, SCREEN_HEIGHT, BG_COLOR, KEYS, TRACER_VALUE
@@ -10,6 +11,7 @@ from global_contants import SCREEN_WIDTH, SCREEN_HEIGHT, BG_COLOR, KEYS, TRACER_
 def play_game():
     """deals with the whole game logic"""
     difficulty = Difficulty()
+    scoreboard = ScoreBoard()
     snake = Snake()
     food = Food()
     sleep_sec = difficulty.game_speed
@@ -27,12 +29,17 @@ def play_game():
     turtle.onkeypress(fun=snake.go_south, key=KEYS[3])
 
     while not end_game:
-        if not snake.move(food):
+        if not snake.move(food, scoreboard):
             end_game = True
+            scoreboard.game_over()
         time.sleep(sleep_sec)
         turtle.update()
 
 
 while True:
-    play_game()
-    turtle.clearscreen()
+    keep_playing = turtle.textinput(title="Play", prompt="Do you want to play the game y/n?").lower()
+    if keep_playing == 'y':
+        turtle.clearscreen()
+        play_game()
+    elif keep_playing == 'n':
+        break
