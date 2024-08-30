@@ -1,6 +1,7 @@
 # contains the global constants
 
 # main file
+TITLE = "Snake Game"
 SCREEN_WIDTH = 600
 SCREEN_HEIGHT = SCREEN_WIDTH
 BG_COLOR = "white"

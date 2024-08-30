@@ -5,7 +5,7 @@ from difficulty import Difficulty
 from scoreboard import ScoreBoard
 from snake import Snake
 from food import Food
-from global_contants import SCREEN_WIDTH, SCREEN_HEIGHT, BG_COLOR, KEYS, TRACER_VALUE
+from global_contants import SCREEN_WIDTH, SCREEN_HEIGHT, BG_COLOR, KEYS, TRACER_VALUE,TITLE
 
 
 def play_game():
@@ -17,6 +17,7 @@ def play_game():
     sleep_sec = difficulty.game_speed
     end_game = False
 
+    turtle.title(TITLE)
     turtle.bgcolor(BG_COLOR)
     turtle.setup(width=SCREEN_WIDTH,
                  height=SCREEN_HEIGHT)
